@@ -6,6 +6,7 @@
   font-style: normal;
 }
 
+
 /* nav-bar */
 nav{
   display: flex;
@@ -56,5 +57,33 @@ nav li a {
   color: white;
   border: none;
   padding: 18px 35px;
-  border-radius: 5px;
+  border-radius: 12px;
+}
+
+
+/* banner styles */
+.banner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  min-height: 80vh;
+}
+
+.banner-content{
+  flex-grow: 2;
+  max-width: 50%;
+}
+.banner-title{
+  font-weight: bold;
+  font-size: 85px;
+}
+
+.banner-img{
+  max-width: 50%;
+}
+
+.banner-description{
+  font-size: 20px; 
 }

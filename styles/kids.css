@@ -6,13 +6,18 @@
   font-style: normal;
 }
 
+button:hover{
+  background-color: blue;
+}
 
 /* nav-bar */
 nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 200px;
+  padding: 20px;
+  max-width: 90%;
+  margin: auto;
 }
 
 .nav-title {
@@ -20,6 +25,10 @@ nav{
   align-items: center;
   font-weight: bold;
   font-size: 32px;
+}
+
+.menu-icon{
+  display: none;
 }
 
 nav ul{
@@ -50,7 +59,11 @@ nav li a {
 .admission{
   color: #5D58EF;
 }
-.btn-primary{
+
+/* button */
+.btn-primary,
+.btn-primary2,
+.btn-primary3{
   background-color: orange;
   font-weight: bold;
   font-size: 20px;
@@ -60,30 +73,314 @@ nav li a {
   border-radius: 12px;
 }
 
+.btn-primary2{
+  background-color: black;
+  align-items:center;
+  margin: 0 auto;
+  
+}
+
+.btn-primary3{
+  background-color: green;
+}
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.circle-button{
+  width: 150px;
+  height: 150px;
+  background-color: orange;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
 
 /* banner styles */
 .banner{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 80%;
+  justify-content: center;
+  flex-direction: column-reverse;
+  text-align: center;
+  width: 100%;
   margin: auto;
-  min-height: 80vh;
+  position: static;
 }
 
 .banner-content{
-  flex-grow: 2;
-  max-width: 50%;
+  max-width: 80%;
+  text-align: center;
+  margin-right: 0;
 }
 .banner-title{
-  font-weight: bold;
-  font-size: 85px;
+  font-weight: 700px;
+  font-size: 56px;
 }
 
 .banner-img{
-  max-width: 50%;
+  width: 100%;
+  max-width: 400px;
 }
 
 .banner-description{
-  font-size: 20px; 
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0%;
+  text-align: left; 
+}
+
+/* styles */
+.section-title{
+  font-size: 46px;
+  font-weight: 700;
+ line-height: 57.5px;
+ letter-spacing: 0%;
+ text-align: center;
+}
+
+.card-title,
+.news-title{
+font-weight: bold;
+font-size: 24px;
+}
+
+.card-description,
+.news-description{
+  font-weight: medium;
+  font-size: 16px;
+  color: gray;
+}
+
+/* curriculum */
+.curriculum{
+  background-image: url(../Images/bg.png) ;
+  position: relative;
+  top: auto;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.curriculum-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-1,
+.card-2,
+.card-3{
+  box-sizing: border-box; 
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 6px 50px 0px solid black;
+  border: 2px solid white;
+  text-align: center;
+  align-items: center;
+}
+
+.card-1{
+  background: #DEF5FF
+}
+.card-2{
+  background: #FFF4DC;
+}
+.card-3{
+  background: #F2E8FF;
+}
+
+.Read-more{
+  list-style: none;
+  text-decoration: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* news */
+
+.news{
+  background: url(../Images/bg.png),linear-gradient(0.00deg, rgba(254, 163, 1, 0.3),rgba(255, 255, 255, 0.3) 100%);
+  background-size:cover ;
+  position: center;
+  margin-bottom: 0;
+}
+
+.news-card-container{
+  height: auto;
+  display: flex;
+  position: relative;
+  top: auto;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.news-card-container>div{
+  flex-grow: 1;
+}
+
+.square-collage{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.news-card,
+.news-card-1{
+  display: grid;
+  place-items: center;
+}
+
+/* Kids Education */
+footer{
+  background: #01ACFD;
+  padding: 130px 230px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  color: white;
+  text-align: center;
+}
+
+footer a{
+  color: white;
+  text-decoration: none;
+}
+
+footer ul{
+  padding: 0;
+}
+
+footer ul li {
+  list-style: none;
+}
+
+.footer-column{
+  width: 50%;
+  text-align: center;
+}
+
+
+
+@media screen and (max-width:576px) {
+ 
+  /* nav */
+  .school,
+  .nav-list,
+  .buttons,
+  .news-card-1{
+    display: none;
+  }
+  
+  .nav-mbl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  .nav-title{
+    position: absolute;
+    width: 15px;
+    height: 28px;
+    left: 12px;
+    top: 7px;
+  }
+
+  .menu-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .menu-img{
+    height: 50px;
+    width: 50px;
+  }
+
+  /* banner */
+  .banner{
+    flex-direction: column-reverse;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    padding: 20px;
+  }
+
+ .banner-img{
+  width: 100%;
+  max-width: 300px;
+ }
+
+ .banner-content{
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+ }
+  
+ /* curriculum */
+.curriculum-container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* news */
+
+.news-card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 18px;
+  
+}
+
+.square-collage{
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.news-card-container>div{
+  width: 100%;
+}
+
+.news{
+  background-size:cover ;
+  position: center;
+  padding: 40px 20px;
+}
+
+/* footer */
+
+footer{
+  flex-direction: column;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.footer-column{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 }
